@@ -1,0 +1,43 @@
+<div class="col">
+    <h2 class="text-center">Editar Especie</h2>
+    <form [formGroup]="editForm" (ngSubmit)="onSubmit()">
+  
+      <div class="form-group">
+        <label for="name">Nombre:</label>
+        <input type="text" formControlName="name" placeholder="name" name="name" class="form-control" id="name" required>
+      </div>
+  
+      <div class="form-group">
+        <label for="cadena_adn_0">Cadena ADN 1:</label>
+        <input type="text" formControlName="cadena_adn_0" placeholder="cadena_adn_0" name="cadena_adn_0" class="form-control" id="cadena_adn_0" required>
+      </div>
+  
+      <div class="form-group">
+        <label for="cadena_adn_1">Cadena ADN 2:</label>
+        <input type="text" formControlName="cadena_adn_1" placeholder="cadena_adn_1" name="cadena_adn_1" class="form-control" id="cadena_adn_1" required>
+      </div>
+  
+      <div class="form-group">
+        <label for="cadena_adn_2">Cadena ADN 3:</label>
+        <input type="text" formControlName="cadena_adn_2" placeholder="cadena_adn_2" name="cadena_adn_2" class="form-control" id="cadena_adn_2" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="cadena_adn_3">Cadena ADN 4:</label>
+        <input type="text" formControlName="cadena_adn_3" placeholder="cadena_adn_3" name="cadena_adn_3" class="form-control" id="cadena_adn_3" required>
+      </div>
+
+      <div class="form-group">
+        <label for="cadena_adn_4">Cadena ADN 5:</label>
+        <input type="text" formControlName="cadena_adn_4" placeholder="cadena_adn_4" name="cadena_adn_4" class="form-control" id="cadena_adn_4" required>
+      </div>
+
+      <div class="form-group">
+        <label for="cadena_adn_5">Cadena ADN 6:</label>
+        <input type="text" formControlName="cadena_adn_5" placeholder="cadena_adn_5" name="cadena_adn_5" class="form-control" id="cadena_adn_5" required>
+      </div>
+  
+      <button class="btn btn-success">Modificar</button>
+      <button class="btn btn-primary" (click)="goBack()">Regresar</button>
+    </form>
+  </div>

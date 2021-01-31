@@ -1,0 +1,55 @@
+<div>
+  <br>
+    <h2>Estadísticas</h2>
+  <br>
+  <div>
+    <button class="btn btn-dark" (click)="getStats()">Consultar</button>
+  </div>
+  <br>
+
+  <br>
+    <h2>Especies</h2>
+  
+  <div>
+    <br><button type="button" class="btn btn-success" (click)="agregarSpecies()">Agregar</button>
+  </div>
+
+  <br>
+
+    <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Cadena de ADN 1</th>
+            <th scope="col">Cadena de ADN 2</th>
+            <th scope="col">Cadena de ADN 3</th>
+            <th scope="col">Cadena de ADN 4</th>
+            <th scope="col">Cadena de ADN 5</th>
+            <th scope="col">Cadena de ADN 6</th>
+            <th scope="col">Condición</th>
+            <th scope="col">Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let species of speciess">
+                <th scope="row">{{species.id}}</th>
+                <td>{{species.name}}</td>
+                <td>{{species.cadena_adn_0}}</td>
+                <td>{{species.cadena_adn_1}}</td>
+                <td>{{species.cadena_adn_2}}</td>
+                <td>{{species.cadena_adn_3}}</td>
+                <td>{{species.cadena_adn_4}}</td>
+                <td>{{species.cadena_adn_5}}</td>
+                <td>{{species.species_condition}}</td>
+                <td> 
+                    <button class="btn btn-warning" (click)="editSpecies(species.id, species)">Editar</button>
+                    <button class="btn btn-danger" (click)="deleteSpecies(species)">Borrar</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <button class="btn btn-primary" (click)="goBack()">Regresar</button>
+    <br>
+    <br>
+</div>

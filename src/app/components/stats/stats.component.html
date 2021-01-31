@@ -1,0 +1,55 @@
+<br>
+
+<br>
+<h2>Especies</h2>
+<br>
+
+<div>
+  <br><button type="button" class="btn btn-success" (click)="agregarSpecies()">Agregar</button>
+</div>
+
+<br>
+
+<div>
+  <br>
+  <h2>Estadísticas</h2>
+  <br>
+
+    <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">Cantidad de Humans</th>
+            <th scope="col">Cantidad de Mutants</th>
+            <th scope="col">Porcentaje de Mutants</th>
+            <th scope="col">Acción</th>
+          </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let species of speciess; first as isFirst">
+                <th *ngIf="isFirst" scope="row">{{species.cant_human}}</th >
+                <th *ngIf="isFirst" scope="row">{{species.cant_mutant}}</th>
+                <th *ngIf="isFirst" scope="row">{{species.mutant_percentage}} %</th>
+                <th *ngIf="isFirst" scope="row">
+                    <button type="button" class="btn btn-success" (click)="getOneMH(species.id)">Crear Gráfico</button>
+                </th>
+            </tr>
+        </tbody>
+    </table>
+    <div class="row">
+        <div class="col-md-4 col-xs mx-auto d-block">
+            <div>
+                <canvas baseChart
+                  [data]="doughnutChartData"
+                  [labels]="doughnutChartLabels"
+                  [chartType]="doughnutChartType">
+                </canvas>
+              </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <button class="btn btn-primary" (click)="goBack()">Regresar</button>
+    <br>
+    <br>
+</div>
+
